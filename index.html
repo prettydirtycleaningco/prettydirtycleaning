@@ -688,7 +688,102 @@ footer {
         font-size: 50px;
     }
 }
+/* EXTRA MOBILE FRIENDLY */
 
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 100%;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 70px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .services-grid,
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 28px 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+    .about-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-box {
+        padding: 28px 22px;
+    }
+
+    .offer-card {
+        padding: 28px 22px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+}
 </style>
 </head>
 
