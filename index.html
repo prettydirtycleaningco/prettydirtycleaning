@@ -3,235 +3,1160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pretty Dirty Cleaning Co.</title>
+
+<title>Pretty Dirty Cleaning Co. | Premium Cleaning Services</title>
+
+<meta name="description" content="Pretty Dirty Cleaning Co. — premium cleaning services for beautifully clean homes.">
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --black: #111111;
+    --soft-black: #1b1719;
+    --pink: #e9a9bd;
+    --light-pink: #f9e7ee;
+    --pale-pink: #fff6f9;
+    --white: #ffffff;
+    --grey: #6d6669;
+    --border: #eadde2;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222;
-  background: #fff;
-  line-height: 1.6;
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
 header {
-  background: #111;
-  color: white;
-  padding: 22px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: var(--black);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-  font-size: 25px;
-  font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 25px;
+    font-size: 14px;
+    color: #fff;
+    transition: .2s;
 }
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.nav-button {
+    background: var(--pink);
+    color: var(--black);
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+/* HERO */
 
 .hero {
-  background: linear-gradient(135deg, #f7d6e8, #fff);
-  padding: 100px 7%;
-  text-align: center;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(233,169,189,.45), transparent 30%),
+        linear-gradient(135deg, #fff7fa 0%, #f8dce6 100%);
+    padding: 105px 0 110px;
 }
 
-.hero h1 {
-  font-size: 52px;
-  margin-bottom: 15px;
+.hero-content {
+    max-width: 850px;
 }
 
-.hero p {
-  font-size: 21px;
-  max-width: 650px;
-  margin: 0 auto 30px;
+.eyebrow {
+    color: #9d526d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.button {
-  display: inline-block;
-  background: #111;
-  color: white;
-  padding: 15px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.02;
+    font-weight: 600;
+    max-width: 850px;
+    margin-bottom: 25px;
 }
+
+h1 span {
+    color: #b45b78;
+}
+
+.hero-text {
+    font-size: 19px;
+    max-width: 650px;
+    color: #51494c;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background: var(--black);
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.btn-pink {
+    background: var(--pink);
+    color: var(--black);
+}
+
+/* INTRO STRIP */
+
+.intro {
+    background: var(--black);
+    color: white;
+    padding: 22px 0;
+}
+
+.intro-inner {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.intro-inner span::before {
+    content: "✦";
+    color: var(--pink);
+    margin-right: 9px;
+}
+
+/* SECTIONS */
 
 section {
-  padding: 70px 7%;
+    padding: 90px 0;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 35px;
-  margin-bottom: 40px;
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
 }
+
+.section-heading .eyebrow {
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    color: var(--grey);
+}
+
+/* SERVICES */
 
 .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+    background: #fff;
 }
 
-.card {
-  padding: 30px;
-  border-radius: 18px;
-  background: #f7f7f7;
-  text-align: center;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
-.card h3 {
-  margin: 15px 0 10px;
-  font-size: 22px;
+.service-card {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 34px 30px;
+    background: white;
+    transition: .25s;
 }
 
-.icon {
-  font-size: 42px;
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(80,40,55,.10);
+    border-color: var(--pink);
 }
+
+.service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* ABOUT */
 
 .about {
-  background: #111;
-  color: white;
-  text-align: center;
+    background: var(--pale-pink);
 }
 
-.about p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 18px;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
 }
+
+.about-box {
+    background: var(--black);
+    color: white;
+    border-radius: 25px;
+    min-height: 430px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-box::after {
+    content: "PDC";
+    position: absolute;
+    right: -25px;
+    bottom: -45px;
+    font-family: "Playfair Display", serif;
+    font-size: 150px;
+    color: rgba(233,169,189,.12);
+}
+
+.about-box .small {
+    color: var(--pink);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.about-box strong {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.05;
+    margin-top: 18px;
+}
+
+.about-copy .eyebrow {
+    margin-bottom: 12px;
+}
+
+.about-copy h2 {
+    margin-bottom: 22px;
+}
+
+.about-copy p {
+    color: var(--grey);
+    margin-bottom: 18px;
+}
+
+/* WHY US */
+
+.why {
+    background: white;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.feature-number {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    color: #c56c88;
+    margin-bottom: 8px;
+}
+
+.feature h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+/* REVIEWS */
+
+.reviews {
+    background: var(--black);
+    color: white;
+}
+
+.reviews .section-heading p {
+    color: #c9c1c4;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review {
+    background: #201c1e;
+    border: 1px solid #3b3437;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.stars {
+    color: var(--pink);
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.review p {
+    color: #eee;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.review strong {
+    font-size: 13px;
+}
+
+/* CTA */
+
+.cta {
+    background:
+        linear-gradient(135deg, #f9dce6, #fff6f9);
+    text-align: center;
+}
+
+.cta h2 {
+    max-width: 750px;
+    margin: 0 auto 18px;
+}
+
+.cta p {
+    color: var(--grey);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* CONTACT */
 
 .contact {
-  background: #f7d6e8;
-  text-align: center;
+    background: white;
 }
 
-.contact p {
-  font-size: 19px;
-  margin-bottom: 25px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
 }
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    color: var(--grey);
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.contact-item-icon {
+    background: var(--light-pink);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.contact-item span {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.quote-box {
+    background: var(--black);
+    color: white;
+    padding: 38px;
+    border-radius: 22px;
+}
+
+.quote-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.quote-box p {
+    color: #c9c1c4;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.quote-box a {
+    display: block;
+    background: var(--pink);
+    color: var(--black);
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+/* FOOTER */
 
 footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 25px;
+    background: #0b0b0b;
+    color: white;
+    padding: 45px 0 25px;
 }
 
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav a {
-    margin: 0 8px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #292929;
 }
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+}
+
+.footer-logo span {
+    color: var(--pink);
+}
+
+.footer-top p {
+    color: #999;
+    font-size: 13px;
+    max-width: 350px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+.copyright {
+    padding-top: 22px;
+    color: #777;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 75px 0 80px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .service-grid,
+    .review-grid,
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-box {
+        min-height: 320px;
+        padding: 35px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .intro-inner {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Pretty Dirty Cleaning Co.</div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            Pretty Dirty <span>Cleaning Co.</span>
+        </a>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-button">Get a Quote</a>
+        </nav>
+
+    </div>
 </header>
 
+
+<main>
+
+<!-- HERO -->
+
 <section class="hero">
-  <h1>Pretty Clean. Seriously Dirty.</h1>
-  <p>
-    Professional cleaning services that leave your home looking fresh,
-    spotless and sparkling.
-  </p>
-  <a class="button" href="#contact">Get a Free Quote</a>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Premium Home Cleaning
+            </div>
+
+            <h1>
+                Pretty clean.<br>
+                <span>Seriously dirty.</span>
+            </h1>
+
+            <p class="hero-text">
+                Beautifully clean homes without the stress.
+                Pretty Dirty Cleaning Co. delivers detailed,
+                reliable and luxurious cleaning services for
+                homes that deserve a little extra love.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="btn btn-dark">
+                    Get a Free Quote
+                </a>
+
+                <a href="#services" class="btn btn-pink">
+                    Explore Services
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="services">
-  <h2 class="section-title">Our Services</h2>
 
-  <div class="services">
+<!-- TRUST STRIP -->
 
-    <div class="card">
-      <div class="icon">🏠</div>
-      <h3>House Cleaning</h3>
-      <p>
-        Regular cleaning to keep your home fresh, tidy and looking its best.
-      </p>
+<div class="intro">
+
+    <div class="container intro-inner">
+
+        <span>Reliable Service</span>
+        <span>Attention to Detail</span>
+        <span>Beautifully Clean Homes</span>
+        <span>Professional &amp; Friendly</span>
+
     </div>
 
-    <div class="card">
-      <div class="icon">✨</div>
-      <h3>Deep Cleaning</h3>
-      <p>
-        A detailed clean for those areas that need a little extra attention.
-      </p>
+</div>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                What We Do
+            </div>
+
+            <h2>
+                Cleaning, but make it pretty.
+            </h2>
+
+            <p>
+                From regular cleans to those “I really need to
+                clean this house” moments, we've got you covered.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">✦</div>
+
+                <h3>Regular Cleaning</h3>
+
+                <p>
+                    Keep your home consistently fresh and
+                    beautifully maintained with a regular cleaning
+                    service tailored to your routine.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✧</div>
+
+                <h3>Deep Cleaning</h3>
+
+                <p>
+                    A detailed top-to-bottom clean for when your
+                    home needs some serious attention and a
+                    beautiful reset.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">♡</div>
+
+                <h3>End of Lease</h3>
+
+                <p>
+                    Moving out? We'll help get your property looking
+                    fresh, spotless and ready for its next chapter.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✦</div>
+
+                <h3>Once-Off Cleans</h3>
+
+                <p>
+                    Perfect for visitors, special occasions,
+                    spring cleaning or simply when life gets
+                    a little too busy.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">♡</div>
+
+                <h3>Kitchen Refresh</h3>
+
+                <p>
+                    Bring your kitchen back to life with detailed
+                    cleaning of the surfaces and areas that
+                    collect everyday grime.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✧</div>
+
+                <h3>Bathroom Refresh</h3>
+
+                <p>
+                    Sparkling bathrooms with attention to the
+                    details that make your space feel truly clean.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="card">
-      <div class="icon">🔑</div>
-      <h3>End of Lease</h3>
-      <p>
-        Detailed cleaning to help get your property ready for inspection.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🏢</div>
-      <h3>Office Cleaning</h3>
-      <p>
-        Professional cleaning to keep your workplace clean and welcoming.
-      </p>
-    </div>
-
-  </div>
 </section>
+
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
-  <h2 class="section-title">Why Choose Us?</h2>
 
-  <p>
-    At Pretty Dirty Cleaning Co., we believe a clean space makes life better.
-    We take pride in our attention to detail, reliability and professional
-    service. Whether you need a regular clean or a one-off deep clean,
-    we're here to help.
-  </p>
+    <div class="container about-grid">
+
+        <div class="about-box">
+
+            <span class="small">
+                Pretty Dirty Cleaning Co.
+            </span>
+
+            <strong>
+                Clean home.<br>
+                Clear mind.
+            </strong>
+
+        </div>
+
+
+        <div class="about-copy">
+
+            <div class="eyebrow">
+                About Us
+            </div>
+
+            <h2>
+                A little luxury for your everyday.
+            </h2>
+
+            <p>
+                At Pretty Dirty Cleaning Co., we believe cleaning
+                shouldn't just mean removing dirt. It's about
+                creating a home that feels calm, fresh and
+                beautifully looked after.
+            </p>
+
+            <p>
+                We're passionate about the little details and
+                providing a cleaning service you can genuinely
+                rely on.
+            </p>
+
+            <a href="#contact" class="btn btn-dark">
+                Let's Get Your Home Pretty
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Why Pretty Dirty?
+            </div>
+
+            <h2>
+                Because the details matter.
+            </h2>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-number">01</div>
+                <h3>Detailed</h3>
+                <p>
+                    We don't just clean. We pay attention to the details.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-number">02</div>
+                <h3>Reliable</h3>
+                <p>
+                    A service you can count on and feel comfortable welcoming into your home.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-number">03</div>
+                <h3>Professional</h3>
+                <p>
+                    Friendly service with a premium, professional approach.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-number">04</div>
+                <h3>Pretty Results</h3>
+                <p>
+                    Because there's nothing better than walking into a beautifully clean home.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Client Love
+            </div>
+
+            <h2>
+                Don't just take our word for it.
+            </h2>
+
+            <p>
+                Real reviews from happy clients.
+            </p>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <div class="review">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Absolutely amazing! The house looked and
+                    smelled incredible. The attention to detail
+                    was exactly what I was looking for.”
+                </p>
+
+                <strong>— Happy Client</strong>
+
+            </div>
+
+
+            <div class="review">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Professional, friendly and thorough.
+                    Coming home to a beautifully clean house
+                    is honestly the best feeling.”
+                </p>
+
+                <strong>— Happy Client</strong>
+
+            </div>
+
+
+            <div class="review">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Couldn't recommend Pretty Dirty Cleaning
+                    Co. enough. Everything was spotless and
+                    the little details were perfect.”
+                </p>
+
+                <strong>— Happy Client</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Ready for a reset?
+        </div>
+
+        <h2>
+            Let's make your home pretty.
+        </h2>
+
+        <p>
+            Tell us a little about your home and what you need
+            cleaned, and we'll get back to you with a quote.
+        </p>
+
+        <a href="#contact" class="btn btn-dark">
+            Get Your Free Quote
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
-  <h2 class="section-title">Get Your Free Quote</h2>
 
-  <p>
-    Ready for a cleaner space? Get in touch with us today.
-  </p>
+    <div class="container contact-grid">
 
-  <a class="button" href="tel:YOURPHONE">Call Us</a>
-  <br><br>
-  <p>
-    📞 YOUR PHONE NUMBER<br>
-    📧 YOUR EMAIL ADDRESS
-  </p>
+        <div class="contact-info">
+
+            <div class="eyebrow">
+                Get In Touch
+            </div>
+
+            <h2>
+                Let's talk cleaning.
+            </h2>
+
+            <p>
+                Ready to take cleaning off your to-do list?
+                Get in touch and let's chat about what you need.
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-item-icon">✉</div>
+
+                <div>
+                    <strong>Email</strong>
+                    <span>hello@prettydirtycleaningco.com</span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-item-icon">☎</div>
+
+                <div>
+                    <strong>Phone</strong>
+                    <span>0400 000 000</span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-item-icon">♡</div>
+
+                <div>
+                    <strong>Service Area</strong>
+                    <span>Your local area &amp; surrounds</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="quote-box">
+
+            <h3>
+                Ready to get a quote?
+            </h3>
+
+            <p>
+                Send us an email with your name, suburb,
+                type of clean and roughly how many bedrooms
+                and bathrooms your home has.
+            </p>
+
+            <a href="mailto:hello@prettydirtycleaningco.com?subject=Cleaning Quote Enquiry">
+                Request a Free Quote
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
+</main>
+
+
 <footer>
-  <p>© 2026 Pretty Dirty Cleaning Co. All Rights Reserved.</p>
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+
+                <div class="footer-logo">
+                    Pretty Dirty <span>Cleaning Co.</span>
+                </div>
+
+                <p>
+                    Premium cleaning services for beautifully
+                    clean homes.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Pretty Dirty Cleaning Co. All rights reserved.
+        </div>
+
+    </div>
+
 </footer>
 
 </body>
